@@ -49,6 +49,7 @@ export default function Home() {
     if (!toastShown) {
       toast({
         title: "Note",
+        variant: "destructive",
         description:
           "This app run in serverless GPUs to save cost, so first file you upload will surely fail due to 504 status code. Try immediately after that, it will work.",
       });
