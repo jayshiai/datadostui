@@ -6,6 +6,7 @@ import {
   sendImageToApi,
   sendTextToApi,
 } from "@/lib/file-processing";
+import { useToast } from "@/hooks/use-toast";
 import ImageResult from "@/components/image-result";
 import TextResult from "@/components/text-result";
 import CameraFeed from "@/components/camera-feed";
@@ -22,6 +23,8 @@ export default function Home() {
     { label: string; score: number }[] | null
   >(null);
 
+  const { toast } = useToast();
+  const [toastShown, setToastShown] = useState(false);
   interface ProcessedFile {
     name: string;
     type?: string;
@@ -43,6 +46,14 @@ export default function Home() {
   };
 
   const processFile = (file: File): void => {
+    if (!toastShown) {
+      toast({
+        title: "Note",
+        description:
+          "This app run in serverless GPUs to save cost, so first file you upload will surely fail due to 504 status code. Try immediately after that, it will work.",
+      });
+      setToastShown(true);
+    }
     const fileType: string = file.type;
     const fileName: string = file.name.toLowerCase();
     let fileCategory: string;
