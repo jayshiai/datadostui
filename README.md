@@ -73,7 +73,9 @@
 
 - [x] Create basic structure
 - [x] Add starting components
-- [x] Add rotues -[x] Add Transcription API -[x] Add API for DataDost AI
+- [x] Add rotues
+  - [x] Add Transcription API
+  - [x] Add API for DataDost AI
 - [ ] Add Blogs and Guides
 - [ ] Add Docs
 
