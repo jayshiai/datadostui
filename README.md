@@ -1,4 +1,3 @@
-![Vercel Status](https://vercel.app/api/status.svg)
 <a id="readme-top"></a>
 
 [![Contributors][contributors-shield]][contributors-url]
