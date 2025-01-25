@@ -372,12 +372,12 @@ export default function Home() {
               videoRef={videoRef}
               setImageResult={setImageResult}
             />
-            <SpeechRecognitionComponent
+            {/* <SpeechRecognitionComponent
               setProcessing={setProcessing}
               setFileInfo={setFileInfo}
               setTextResult={setTextResult}
               setTranscriptGlobal={setTranscript}
-            />
+            /> */}
           </div>
         </div>
       </div>
