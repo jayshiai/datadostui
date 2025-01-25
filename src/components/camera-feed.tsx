@@ -101,7 +101,7 @@ const CameraFeed: React.FC<CameraFeedProps> = ({
   const startAutoCapture = () => {
     intervalRef.current = setInterval(() => {
       captureFrame();
-    }, 5000); // Capture frame every 10 seconds
+    }, 5000);
   };
 
   const stopAutoCapture = () => {

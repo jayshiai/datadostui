@@ -82,6 +82,7 @@ export default function Home() {
       const transcribeAudio = async (file: File) => {
         try {
           const result = await sendAudioToOpenAI(file);
+          console.log("Transcription result:", result);
           setProcessing(false);
           setTranscript(result.text);
           const textResult = await sendTextToApi(result.text);

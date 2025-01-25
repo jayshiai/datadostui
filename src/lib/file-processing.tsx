@@ -1,32 +1,20 @@
 export const sendAudioToOpenAI = async (file: File) => {
-  const apiKey = process.env.NEXT_PUBLIC_OPENAI_API_KEY; // Use a public environment variable
-  if (!apiKey) {
-    throw new Error("OpenAI API key is not set in environment variables");
-  }
-
-  const formData = new FormData();
-  formData.append("file", file);
-  formData.append("model", "whisper-1");
-
   try {
-    const response = await fetch(
-      "https://api.openai.com/v1/audio/transcriptions",
-      {
-        method: "POST",
-        headers: {
-          Authorization: `Bearer ${apiKey}`,
-        },
-        body: formData,
-      }
-    );
+    const formdata = new FormData();
+    formdata.append("file", file);
+    formdata.append("model", "whisper-1");
+    const response = await fetch("/api/transcribe", {
+      method: "POST",
+      body: formdata,
+    });
 
     if (!response.ok) {
-      throw new Error(`OpenAI API responded with status ${response.status}`);
+      throw new Error(`Transcription API error: ${response.status}`);
     }
 
-    const result = await response.json();
-    console.log("Transcription result:", result);
-    return result; // Handle the transcription result as needed
+    const data = await response.json();
+    console.log("Transcription result:", data);
+    return data;
   } catch (error) {
     console.error("Error transcribing audio:", error);
     throw error;

@@ -5,11 +5,11 @@ export async function POST(request: Request) {
     const body = await request.json();
     console.log('Request Body:', body);
 
-    const response = await fetch(`https://api.runpod.ai/v2/${process.env.NEXT_PUBLIC_RUNPOD_ENDPOINT}/runsync`, {
+    const response = await fetch(`https://api.runpod.ai/v2/${process.env.RUNPOD_ENDPOINT}/runsync`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        Authorization: `Bearer ${process.env.NEXT_PUBLIC_RUNPOD_APIKEY}`, // Add your token here
+        Authorization: `Bearer ${process.env.RUNPOD_APIKEY}`, // Add your token here
       },
       body: JSON.stringify(body),
     });
