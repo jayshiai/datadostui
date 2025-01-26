@@ -1,4 +1,3 @@
-![Vercel Status](https://vercel.app/api/status.svg)
 <a id="readme-top"></a>
 
 [![Contributors][contributors-shield]][contributors-url]
@@ -20,7 +19,7 @@
   <h3 align="center">DataDost UI</h3>
 
   <p align="center">
-    Frontend for DataDost project. You can find the backend code at<a href="https://github.com/jayshiai/datadostai">DataDost AI</a>
+    Frontend for DataDost project. You can find the backend code at <a href="https://github.com/jayshiai/datadostai">DataDost AI</a>
     <br />
     <a href="https://es.3dubs.in"><strong>Visit the site »</strong></a>
     <br />
@@ -74,7 +73,9 @@
 
 - [x] Create basic structure
 - [x] Add starting components
-- [x] Add rotues -[x] Add Transcription API -[x] Add API for DataDost AI
+- [x] Add rotues
+  - [x] Add Transcription API
+  - [x] Add API for DataDost AI
 - [ ] Add Blogs and Guides
 - [ ] Add Docs
 
