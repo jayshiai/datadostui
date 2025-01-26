@@ -113,13 +113,11 @@ Distributed under the MIT License. See `LICENSE.md` for more information.
 
 Jayvardhan Patil - [@jayshiai](https://www.reddit.com/user/jayshiai/) - jayshiai7811@gmail.com
 
-Yash Kahalkar - [@yashkahalkar](https://www.reddit.com/user/yashkahalkar/)
+Yash Kahalkar - [@yashkahalkar](Kahalkaryash@gmail.com)
 
-Yash Nagaria - [@yashnagaria](https://www.reddit.com/user/yashnagaria/)
+Yash Nagaria - [@yashnagaria](yashnagaria@gmail.com)
 
-Project Link: [https://github.com/jayshiai/buildubs](https://github.com/jayshiai/datadost)
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+Project Link: [https://github.com/jayshiai/datadost](https://github.com/jayshiai/datadost)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
