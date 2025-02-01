@@ -79,7 +79,7 @@ const SpeechRecognitionComponent: React.FC<SpeechRecognitionComponentProps> = ({
     setIsListening(false);
     const getTextResult = async () => {
       try {
-        const response = await sendTextToApi(transcript);
+        const response = await sendTextToApi(transcript, "en");
         setTextResult(response.output);
         setProcessing(false);
       } catch (error) {
