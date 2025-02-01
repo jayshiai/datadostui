@@ -49,7 +49,7 @@ export const sendImageToApi = async (base64Image: string) => {
   }
 };
 
-export const sendTextToApi = async (text: string) => {
+export const sendTextToApi = async (text: string, language: string) => {
   try {
     const response = await fetch("/api/runpod", {
       method: "POST",
@@ -59,6 +59,7 @@ export const sendTextToApi = async (text: string) => {
       body: JSON.stringify({
         input: {
           type: "text",
+          lang: language == "hindi" ? "hi" : "en",
           text,
         },
       }),

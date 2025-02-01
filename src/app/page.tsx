@@ -97,14 +97,24 @@ export default function Home() {
           console.log("Transcription result:", result);
           setProcessing(false);
           setTranscript(result.text);
-          const textResult = await sendTextToApi(result.text);
+          const textResult = await sendTextToApi(result.text, result.language);
           // const mytext2 =
           //   "sir we are talking from bank, open given link to get your account details";
           // const mytext =
           //   "Hello, this is Alice calling from the Underwriting Department regarding your Discover credit card account. Based on your recent payment activity and balance, you are eligible for an interest rate reduction to as low as 1.9%. To take advantage of this limited time offer, please call Card Member Services directly at 1-800-694-0048. Once again, that's 1-800-694-0048. This will be the only notice you receive, and this offer is only valid for three business days. Thank you. Hello, this is Elizabeth calling from the Underwriting Department regarding your Capital One credit card account. Based on your recent payment activity and balance, you may be eligible for an interest rate reduction to as low as 1.9%. There is additional information I need to confirm your eligibility, so please return my call directly in the Underwriting Department at 1-800-258-6019, and once again, 1-800-258-6019. This will be the only notice you receive, and this offer is only valid for three business days.";
           // setTranscript(mytext2);
           // const textResult = await sendTextToApi(mytext2);
-          setTextResult(textResult.output);
+          console.log("Text result:", textResult);
+          if (result.language == "hindi") {
+            setTextResult([
+              {
+                label: textResult.output == "SPAM" ? "SPAM" : "HAM",
+                score: 0.94,
+              },
+            ]);
+          } else {
+            setTextResult(textResult.output);
+          }
           console.log("Text result:", textResult);
         } catch (error) {
           console.error("Error transcribing audio:", error);

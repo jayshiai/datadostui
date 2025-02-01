@@ -24,9 +24,11 @@ export async function POST(req: Request) {
       );
     }
 
+
     // Append additional data if necessary
     formData.append('model', model);
-
+    formData.append('response_format', 'verbose_json');
+    formData.append('timestamp_granularities', JSON.stringify(['segment']));
     // Send the request to the OpenAI API
     const openAiResponse = await fetch('https://api.openai.com/v1/audio/transcriptions', {
       method: 'POST',
