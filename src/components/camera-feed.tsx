@@ -101,7 +101,7 @@ const CameraFeed: React.FC<CameraFeedProps> = ({
   const startAutoCapture = () => {
     intervalRef.current = setInterval(() => {
       captureFrame();
-    }, 5000);
+    }, 1000);
   };
 
   const stopAutoCapture = () => {
